@@ -1,6 +1,7 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*/*.mp4 filter=lfs diff=lfs merge=lfs -text
+TerrainGenerator/Video.mp4 filter=lfs diff=lfs merge=lfs -text
+CartMechanics/Video.mp4 filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
 *.html filter=lfs diff=lfs merge=lfs -text
 /CNAME filter=lfs diff=lfs merge=lfs -text
