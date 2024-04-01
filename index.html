@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Pandaz Portfolio</title>
     <style>
         /* Add your CSS styles here */
         body {
@@ -113,28 +113,31 @@
             opacity: 1;
         }
         .backbutton {
-            display: inline-block;
-            padding: 3px 10px;
             font-family: 'Fira Mono', monospace;
-            font-size: 200%;
-            font-weight:normal;
+            font-size: 800%;
+            font-weight:bold;
             text-decoration: none;
             color: #000000;
             background-color: #ffffff;
-            border: none;
-            cursor: pointer;
-            height: 5%;
+            -webkit-text-stroke-width: 5px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+            cursor:pointer;
+            text-align: center;
+            width: 150px;
+            padding: 0px;
+            height: 150px;
         }
         .backbutton:hover {
             font-weight:bolder;
             color: #ffffff;
-            background-color: #000000;
+            -webkit-text-stroke-width: 5px;
+            -webkit-text-stroke-color: black;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name - Portfolio</h1>
+        <h1>Pandaz Portfolio</h1>
         <nav>
             <a href="index.html">Work</a>
             <a href="contact.html">Contact</a>
@@ -262,7 +265,8 @@
                 <a href="" class="backbutton" >\<</a>
                 <div class="project">
                     <div class="project-title">${project.name}</div>
-                    <video controls>
+                    
+                    <video controls autoplay class="video">
                         <source src="https://github.com/pandazdev/PandazDev/raw/main/${project.video}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -271,8 +275,14 @@
                     <a href="${project.gamelink}" target="_blank" class="button">Play The Game!</a>
                 </div>
             `;
+            
              document.getElementsByClassName('container')[0].remove();
              container.innerHTML = html; // Set the HTML of the container
+             console.log(project.video)
+             if (project.video === "") {
+                
+                document.getElementsByClassName('video')[0].remove();
+            }
         }
     </script>
 
