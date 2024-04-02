@@ -75,24 +75,27 @@ p {
 /* Your existing CSS styles */
 
 .testimonial-container {
-   
+
+    align-items: center;
+    justify-content: center;
     white-space: nowrap;
     margin-top: 40px;
-    width: 100vw;
+    width: device-width;
     display: flex;
     height: 1vh;
-    
     flex-wrap: nowrap;
+    left: 50%;
+    padding-top:3%;
 }
 
 .testimonial {
-    width: 100vw;
-    height: 10vh;
-    padding: 20px;
+    height: 12vh;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
